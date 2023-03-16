@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Responsive Navbar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <header>
+        <div class="navbar">
+            <div class="logo" href="#"><a href="">Web Dev Creative</a></div>
+            <ul class="links">
+                <li><a href="#" class="home">home</a></li>
+                <li><a href="#" class="about">about</a></li>
+                <li><a href="#" class="services">services</a></li>
+                <li><a href="#" class="contact">contact</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="#" class="home">home</a></li>
+            <li><a href="#" class="about">about</a></li>
+            <li><a href="#" class="services">services</a></li>
+            <li><a href="#" class="contact">contact</a></li>
+            <li> <a href="#" class="action_btn">Get Started</a></li>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>welcome</h1>
+            <p>Lorem ipsum dolor sit amet consectetur elit.<br>
+                 Pariatur molestias eum perspiciatis.</p>
+        </section>
+    </main>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropdownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle('open')
+
+            //Trocando o bars por xmark
+            const isOpen = dropdownMenu.classList.contains('open')
+            
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
