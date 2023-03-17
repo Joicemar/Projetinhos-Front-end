@@ -1,0 +1,251 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6))
+    ,url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLOlslPRjLDBQk_Qo7hS_1A8GEYIKHwxiyw&usqp=CAU');
+    background-size: cover; /*Caso o monitor for maior*/
+    background-position: center;
+    height: 92vh;
+}
+header
+{
+    background: rgb(27, 7, 48);
+    display: flex;
+    align-items: center;
+    height: 55px;
+}
+
+header div
+{
+    color: aliceblue;
+    margin-inline: 22px;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+header nav 
+{
+    width: 100%;
+    /*Essa config também deu ceto no ul*/
+    display: flex;
+    align-items: center;
+
+}
+
+header nav ul
+{
+    /*absolute para poder posicionar com right*/
+    position: absolute;
+    display: flex;
+    right: 8%;
+    list-style: none;
+    gap: 42px;
+    transition: 1s;
+}
+
+@media (max-width: 600px){
+    header nav ul {
+        right: 30px;
+        gap: 32px;
+        display: none;
+    }
+    header nav ul.active {
+        display: block;
+    }
+}
+
+header nav ul li
+{
+    color: beige;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 13pt;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+header nav ul li:hover
+{
+    opacity: 0.4;
+}
+
+header nav ul li div
+{
+    background-color: beige;
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+header nav ul li:hover div
+{
+    width: 100%;
+}
+
+/*Bar mobile*/
+main{
+    width: 100%;
+}
+.bar div {
+    width: 40px;
+    height: 3px;
+    margin: 7px;
+    background-color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.bar
+{
+    cursor: pointer;
+    padding: 29px;
+}
+
+@media (max-width: 600px){
+    .bar div {
+        display: block;
+    }
+    nav {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+    header {
+        height: 130px;
+    }
+    .ico {
+        position: relative;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 600px){
+    menu2.active{
+        display: none;
+    }
+    .menu-ul.active{
+        display: none;
+    }
+    .menu-ul li{
+        display: none;
+    }
+}
+
+main
+{
+
+}
+
+.menu2
+{
+    height: 00px;
+    width: 100%;
+    transition: 0.4s;
+    margin-top: 9px;
+}
+
+.menu-ul
+{
+    
+    /*lembrando que para centralizar de forma 
+    justificada é melhor ter um pai com 100% de largura*/
+    width: calc(100% - 50px);
+    height: 0px;
+    margin: auto; /*Lembrando que auto divide a margem e o centraliza*/
+
+    background-color: rgba(189, 189, 189, 0.664);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+
+}
+
+.menu-ul li
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+    padding: 4px;
+    display: none;
+    padding: 10px;
+}
+
+.menu-ul.active
+{
+    height: 350px;
+    background-color: rgba(214, 214, 214, 0.219);
+    justify-content: space-around;
+    border-radius: 22px;
+}
+
+.menu2.active
+{
+    height: 300px;
+    width: 100%;
+    
+}
+
+.menu-ul.active li
+{
+    display: block;
+    opacity: 1;
+}
+
+.menu-ul.active li:hover 
+{
+    opacity: 0.6;
+}
+
+.bar div
+{
+    transition: .1s;
+    border-radius: 5px;
+}
+
+.bar .line2
+{
+    transition: 0s;
+}
+
+.bar.active .line1 {
+    position: relative;
+    transform: rotate(-45deg) translate(-7px, 8px);
+}
+/* 400deg da uma volta completa*/
+.bar.active .line2 {
+    position: relative;
+    opacity: 0;
+    transform: rotate(-400deg);
+
+  }
+  
+  .bar.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+.menu2 .menu-ul li div
+  {
+      background-color: rgb(236, 255, 238);
+      width: 0%;
+      height: 2px;
+      margin: auto;
+      transition: 0.5s;
+  }
+  
+ .menu-ul.active li:hover div
+  {
+      width: 100%;
+  }
