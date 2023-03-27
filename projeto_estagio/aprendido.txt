@@ -1,0 +1,22 @@
+Para Distribuir botoes sem o justifi-content e manter o conteúdo no centro:
+usar o width: 100% para preencher todo o espaço e automaticamente já
+irá Distribuir os botões de tamanhos iguas naquela linha, sem configurações
+. Depois é só colocar o text-align: center; e seu conteúdo vai centralizar!
+.menu nav ul li
+{
+    list-style: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+Ou :
+.menu nav ul li
+{
+    list-style: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
