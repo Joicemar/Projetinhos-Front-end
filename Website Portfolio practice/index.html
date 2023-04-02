@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-BGCXa4b4Q4eCnh+tLk7jzMcT8TQQr9hJgOSZ1DdZnScPMElXPkfGNAqNxL+gkq3C" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo"><span>My</span>Portfolio_</a>
+            <div class="dayNight">
+                <ion-icon class="night" name="moon-outline"></ion-icon>
+                <ion-icon class="day" name="sunny-outline"></ion-icon>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="bar">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="icos">
+                <ion-icon class="icon" size="large" name="logo-facebook"></ion-icon>
+                <ion-icon class="icon" size="large" name="logo-github"></ion-icon>
+                <ion-icon class="icon" size="large" name="logo-linkedin"></ion-icon>
+                <ion-icon class="icon" size="large" name="logo-discord"></ion-icon>
+            </div>
+            <nav class="menu2">
+                <ul class="menu-ul">
+                    <li class="option">Início
+                        <div></div>
+                    </li>
+                    <li class="option">Sobre<div></div>
+                    </li>
+                    <li class="option">Projetos<div></div>
+                    </li>
+                    <li class="option">Contato<div></div>
+                    </li>
+                </ul>
+            </nav>
+       
+            <div class="content">
+                <h3>hey_</h3>
+                <h2>I am <span class="text" id="text"></span></h2>
+                <p>
+                    Pensamentos: É praticando que se aprende.
+                    O que trás resuldades é fazer a diferença.
+                </p>
+                <button class="button">Hire me</button>
+                <ion-icon name="chatbubbles-outline" class="chat-ico"></ion-icon> <button class="chat">Let's
+                    Chat</button>
+            </div>
+            <img class="colors" src="colors.png" alt="">
+            <img class="imagens" src="men2.png" alt="">
+        </main>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script>
+
+        let typingText = new Typed("#text", {
+            strings: ["Jhon", "Designer", "Coder", "Youtuber"],
+            loop: true,
+            typeSpeed: 170,
+            backSpeed: 70,
+            backDelay: 2000,
+            loop: true,
+        })
+
+        const circle = document.querySelector(".dayNight");
+        const container = document.querySelector(".container");
+
+        circle.addEventListener("click", function () {
+            if (container.classList.contains("day")) {
+                container.classList.remove("day");
+                container.classList.add("night");
+            } else {
+                container.classList.remove("night");
+                container.classList.add("day");
+            }
+        });
+        //bars:
+        let menu2Toggle = document.querySelector('.menu2');
+        let menu_ulToggle = document.querySelector('.menu-ul');
+        let barToggle = document.querySelector('.bar');
+
+        barToggle.onclick = function () {
+            barToggle.classList.toggle('active');
+            menu2Toggle.classList.toggle('active')
+            menu_ulToggle.classList.toggle('active')
+        }
+
+    </script>
+</body>
+
+</html>
