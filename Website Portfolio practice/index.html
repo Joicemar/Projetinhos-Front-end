@@ -7,12 +7,13 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-BGCXa4b4Q4eCnh+tLk7jzMcT8TQQr9hJgOSZ1DdZnScPMElXPkfGNAqNxL+gkq3C" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-BGCXa4b4Q4eCnh+tLk7jzMcT8TQQr9hJgOSZ1DdZnScPMElXPkfGNAqNxL+gkq3C" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container day">
         <header>
             <a href="#" class="logo"><span>My</span>Portfolio_</a>
             <div class="dayNight">
@@ -42,7 +43,6 @@
             <nav class="menu2">
                 <ul class="menu-ul">
                     <li class="option">Início
-                        <div></div>
                     </li>
                     <li class="option">Sobre<div></div>
                     </li>
@@ -52,7 +52,7 @@
                     </li>
                 </ul>
             </nav>
-       
+
             <div class="content">
                 <h3>hey_</h3>
                 <h2>I am <span class="text" id="text"></span></h2>
@@ -64,8 +64,11 @@
                 <ion-icon name="chatbubbles-outline" class="chat-ico"></ion-icon> <button class="chat">Let's
                     Chat</button>
             </div>
-            <img class="colors" src="colors.png" alt="">
-            <img class="imagens" src="men2.png" alt="">
+            <div class="imagens">
+                <img id="colors" class="colors" src="colors.png" alt="">
+                <img class="men" src="men2.png" alt="">
+            </div>
+        </main>
         </main>
     </div>
 
@@ -77,7 +80,7 @@
     <script>
 
         let typingText = new Typed("#text", {
-            strings: ["Jhon", "Designer", "Coder", "Youtuber"],
+            strings: ["Joicemar", "Designer", "Coder", " Front End Developer"],
             loop: true,
             typeSpeed: 170,
             backSpeed: 70,
