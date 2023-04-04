@@ -6,7 +6,7 @@
 }
 
 body {
-    overflow-y: hidden;
+    overflow-y: visible;
     /* oculta a rolagem vertical */
     overflow-x: visible;
     /* permite que o conteúdo se estenda horizontalmente */
@@ -167,6 +167,7 @@ header ul li a:hover {
     bottom: 50%;
     margin: auto;
     margin-left: 50px;
+    z-index: 12;
 }
 
 main .content h3,
@@ -240,13 +241,24 @@ button {
         justify-content: center;
         align-items: center;
     }
+    section{
+        display: flex;
+    }
+    main .imagens .colors {
+        display: none;
+    }
+    main .imagens .men {
+        display: none;
+    }
 }
 
 @media (min-width: 800px) {
     main .menu2 {
         display: none;
     }
+
 }
+
 .colors {
     position: absolute;
     right: 70px;
@@ -254,7 +266,6 @@ button {
     animation: animateColor 5s ease-in-out infinite;
     display: block;
 }
-
 @keyframes animateColor {
 
     0%,
@@ -296,7 +307,7 @@ button {
     right: 0;
     margin-top: 10px;
     background-color: #333;
-    transition: 1s;
+    transition: .5s;
     display: flex;
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
@@ -317,13 +328,15 @@ button {
 .menu2 ul li {
     color: #FFF;
     list-style: none;
+    display: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     letter-spacing: .8pt;
-    display: none;
     transition: .3s;
     padding: 20px;
     border-radius: 20px;
+	transition: opacity 1s;
+    opacity: 0;
 }
 
 .menu2 ul li:hover {
@@ -331,14 +344,19 @@ button {
 }
 
 .menu2.active {
-    width: 35vw;
-    z-index: 7;
+    width: 40vw;
+    z-index: 14;
 }
 
 .menu2.active ul li {
     display: block;
+    opacity: 1;
 }
-
+.menu2.active ul li box-icon
+{
+    cursor: pointer;
+    color: #cfcfcf;
+}
 /*Logos*/
 
 main ul.sci {
@@ -365,6 +383,7 @@ main ul.sci {
     cursor: pointer;
     padding: 12px;
     border-radius: 50%;
+    z-index: 13;
 }
 .container.night .icos ion-icon:hover
 {

@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-BGCXa4b4Q4eCnh+tLk7jzMcT8TQQr9hJgOSZ1DdZnScPMElXPkfGNAqNxL+gkq3C" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
 </head>
 
@@ -17,8 +18,8 @@
         <header>
             <a href="#" class="logo"><span>My</span>Portfolio_</a>
             <div class="dayNight">
-                <ion-icon class="night" name="moon-outline"></ion-icon>
-                <ion-icon class="day" name="sunny-outline"></ion-icon>
+                <ion-icon class="day" name="moon"></ion-icon>
+                <ion-icon class="night" name="sunny"></ion-icon>
             </div>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -69,7 +70,6 @@
                 <img class="men" src="men2.png" alt="">
             </div>
         </main>
-        </main>
     </div>
 
 
@@ -82,8 +82,8 @@
         let typingText = new Typed("#text", {
             strings: ["Joicemar", "Designer", "Coder", " Front End Developer"],
             loop: true,
-            typeSpeed: 170,
-            backSpeed: 70,
+            typeSpeed: 100,
+            backSpeed: 50,
             backDelay: 2000,
             loop: true,
         })
@@ -101,7 +101,7 @@
             }
         });
         //bars:
-        let menu2Toggle = document.querySelector('.menu2');
+        var menu2Toggle = document.querySelector('.menu2');
         let menu_ulToggle = document.querySelector('.menu-ul');
         let barToggle = document.querySelector('.bar');
 
@@ -109,6 +109,7 @@
             barToggle.classList.toggle('active');
             menu2Toggle.classList.toggle('active')
             menu_ulToggle.classList.toggle('active')
+
         }
 
     </script>
