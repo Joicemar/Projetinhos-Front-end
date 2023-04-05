@@ -1,15 +1,13 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif, Helvetica;
 }
 
-.menu
-{
+.menu {
     height: 100vh;
     width: 100%;
     background-image: url("imagens/london.jpg");
@@ -19,8 +17,7 @@
     justify-content: center;
 }
 
-.head
-{
+.head {
     background-color: white;
     display: flex;
     align-items: center;
@@ -31,60 +28,151 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 66px; /* Substitua pelo valor da altura do seu cabeçalho */
-    background-color: #fff; /* Substitua pela cor de fundo do seu cabeçalho */
-    z-index: 1; /* Garante que o cabeçalho fique acima dos outros elementos */
+    height: 66px;
+    /* Substitua pelo valor da altura do seu cabeçalho */
+    background-color: #fff;
+    /* Substitua pela cor de fundo do seu cabeçalho */
+    z-index: 1;
+    /* Garante que o cabeçalho fique acima dos outros elementos */
 }
-.logo_name
-{
+
+.logo_name {
     font-size: 20pt;
     padding-left: 12px;
 }
-.large.material-icons 
-{
-    font-size: 38px; /* Substitua pelo tamanho desejado */
-    width: 50px; /* Substitua pelo tamanho desejado */
+
+.large.material-icons {
+    font-size: 38px;
+    /* Substitua pelo tamanho desejado */
+    width: 50px;
+    /* Substitua pelo tamanho desejado */
 }
-.head-local span
-{
-    font-size: 30px; /* Substitua pelo tamanho desejado */
-    width: 30px; /* Substitua pelo tamanho desejado */
+
+.head-local span {
+    font-size: 30px;
+    /* Substitua pelo tamanho desejado */
+    width: 30px;
+    /* Substitua pelo tamanho desejado */
 }
-.head-local
-{
+
+.head-local {
     display: flex;
     align-items: center;
     color: rgb(253, 83, 83);
 }
-.head-local div
-{
+
+.head-local div {
     margin-left: 10px;
     font-weight: 700;
 }
 
-.search
-{
+.search {
     color: #666;
 }
+
 /*Formulário*/
-.menu .formulario{
+.menu .formulario {
     background-color: rgb(255, 255, 255);
     width: calc(66%);
+    width: max(77%, 630px);
+    height: 320px;
+    max-width: 1120px;
     margin: auto;
 }
+.imagens-coluna{
+    display: none;
+}
+/*05/04/2023 responsividade do formulário*/
+@media (max-width: 650px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 
-.menu nav ul
-{
+    .menu .formulario {
+        margin-top: 66px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .menu {
+        width: 100%;
+        height: 400px;
+    }
+
+    .menu .formulario .inputs {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu .formulario .inputs .input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    #button {
+        width: 50%;
+    }
+    .menu .formulario nav {
+        width: 100%;
+    }
+    /*Tratamento das imagens.
+    Desativando o container das 4 imagens e ativando o 
+    container com lista de imagens*/
+    #imagens-ofertas {
+        display: none;
+    }
+    .imagens-coluna {
+        display: block;
+    }
+    main .ofertas{
+        position: relative;
+        margin-top: 100px;
+    }
+    .imagens-coluna ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .imagens-coluna li {
+        flex: 1 0 25%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-inline: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .imagens-coluna img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+}
+
+@media (min-width: 651px) and (max-width: 768px) {
+    .menu .formulario {
+        width: max(90%, 300px);
+    }
+}
+
+/*05/04/2023 Fim responsividade do formulário*/
+.menu nav ul {
     display: flex;
     align-items: center;
-    background-color: black;
 }
-#fli
-{
+#flight{
+    background-color: rgb(255, 25, 25);
+}
+#fli {
     rotate: 45deg;
 }
-.menu nav ul li
-{
+
+.menu nav ul li {
     list-style: none;
     color: white;
     width: 100%;
@@ -92,62 +180,59 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /*Distancia entre o icone e a palavra*/
+    gap: 12px;
+    /*Distancia entre o icone e a palavra*/
     padding-top: 12px;
     padding-bottom: 12px;
     transition: 0.2s;
     cursor: pointer;
+    background-color: rgb(0, 0, 0);
+
 }
-.menu nav ul li:hover
-{
-    background-color: rgb(255, 56, 56);
-}
-.menu nav ul li::before
-{
-    background-color: rgb(255, 56, 56);
-}
+
+
 /*Menu inputs*/
-.inputs
-{
+.inputs {
     padding: 20px;
 }
-.inputs h1
-{
+
+.inputs h1 {
     font-family: 'Poiret One', cursive, sans-serif;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
+    margin-top: 16px;
 }
-.inputs div
-{
+
+.inputs div {
     display: flex;
 }
-.inputs div div
-{
+
+.inputs div div {
     flex-direction: column;
     width: 100%;
 }
-.inputs div .from 
-{
+
+.inputs div .from {
     margin-right: 20px;
 }
-.inputs div div h3
-{
+
+.inputs div div h3 {
     font-family: sans-serif;
     font-weight: 200;
     color: #555;
 }
-.inputs div div input
-{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+.inputs div div input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     font-family: sans-serif;
-    border-radius: #777 5px; /*Cor para os 4 lados do input*/
+    border-radius: #777 5px;
+    /*Cor para os 4 lados do input*/
 }
 
-.button-dates input
-{
-    background-color: #555;
+.button-dates input {
+    background-color: #666;
     padding: 10px;
     padding-inline: 16px;
     border: none;
@@ -158,10 +243,10 @@
     margin-top: 10px;
 
 }
+
 /*Ofertas e imagens*/
 
-.ofertas 
-{
+main .ofertas {
     display: flex;
     flex-wrap: in;
     justify-content: center;
@@ -169,41 +254,44 @@
     display: inline;
     /*align-items: flex-start;*/
     width: 100%;
-    background-color: rgb(67, 204, 48);
+    background-color: rgb(223, 223, 223);
+
 }
-.info-ofertas
-{
+
+.info-ofertas {
     font-family: sans-serif;
     color: #333;
     width: 90%;
     margin: 0 auto;
 }
-.info-ofertas h1
-{
+
+.info-ofertas h1 {
     margin-top: 40px;
     margin-bottom: 15px;
     font-weight: 300;
 }
-.info-ofertas h2
-{
+
+h2 {
+    font-family: 'Poiret One', cursive, sans-serif;
+}
+
+.info-ofertas h2 {
     margin-top: 10px;
     margin-bottom: 12px;
     font-size: 12pt;
-    font-weight: 300;
+    font-weight: 800;
 }
-.ofertas .imagens 
-{
+
+.ofertas .imagens {
     width: 90%;
     display: flex;
     margin: 0 auto;
     gap: 15px;
 }
-  
-.ofertas .imagens .img1
-{
+
+.ofertas .imagens .img1 {
     width: 50%;
     height: 100%;
-    max-width: 600px;
 
 }
 
@@ -211,36 +299,103 @@
     width: 100%;
     height: 100%;
 }
-  
+
 .ofertas .imagens .box-images {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
     height: 100%;
-    max-width: 600px;
 }
-.exemplo1
-{
+
+.exemplo1 {
     margin-right: 15px;
     margin-bottom: 0px;
 }
-.ofertas .imagens .box-images > div {
+
+.ofertas .imagens .box-images>div {
     width: 50%;
 
 }
-  
+
 .ofertas .imagens .box-images img {
     width: 100%;
     gap: 15px;
-    
+
 }
-.acima /*para aplicar a margem só na imagem de cima da coluna*/
-{
+
+.acima
+
+/*para aplicar a margem só na imagem de cima da coluna*/
+    {
     margin-bottom: 7px;
 }
-.baixo /*aplicar a margin para a imagem de baixo descer mais um pouco*/
-{
-   margin-top: 4px;
+
+.baixo
+
+/*aplicar a margin para a imagem de baixo descer mais um pouco*/
+    {
+    margin-top: 4px;
 }
+
 /*Fim do ofertas e imagens*/
+
+/*Segunda setiction de imagens*/
+.nature {
+    background-color: red;
+    margin-top: 1300px;
+}
+
+.nature div {
+    width: 90%;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+.nature .sobre {
+    width: 100%;
+    background-color: #fff;
+}
+
+.nature .sobre h1 {
+    font-family: sans-serif;
+    font-weight: 200;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.nature .sobre>h2 {
+    font-family: 'Poiret One', cursive, sans-serif;
+    color: #3a3a3a;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-size: 12pt;
+    font-weight: 800;
+}
+
+.nature div div {
+    width: 100%;
+    margin-left: 0;
+}
+
+/*Fim da breve description da Segunda setiction de imagens*/
+.containers-imagens {
+    display: flex;
+    width: 120%;
+}
+
+.containers-imagens .bloco1 img {
+    width: 100%;
+    height: 60vh;
+    background-image: url(imagens/ocean.jpg);
+    object-fit: fill;
+
+}
+
+.containers-imagens .bloco2 img {
+    background-image: url(imagens/mountains.jpg);
+    object-fit: fill;
+
+}

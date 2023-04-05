@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Desafio dos Estagiários</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
@@ -27,19 +28,19 @@
     <main>
         <section class="menu">
             <div class="formulario">
-            <nav>
-                <ul>
-                    <li class="permanent"><i class="material-icons" id="fli" >flight</i>Flight</li>
-                    <li class="permanent"><i class="material-icons">hotel</i>Hotel</li>
-                    <li class="permanent"><i class="material-icons">directions_car</i>Hental</li>
-                </ul>
-            </nav>
-            <div class="inputs">
+                <nav>
+                    <ul class="ul">
+                        <li class="flight" id="flight"><i class="material-icons" id="fli">flight</i>Flight</li>
+                        <li class="hotel"><i class="material-icons">hotel</i>Hotel</li>
+                        <li class="hental"><i class="material-icons">directions_car</i>Hental</li>
+                    </ul>
+                </nav>
+                <div class="inputs">
                     <div class="title_menu">
                         <h1>Travel the world with us</h1>
                     </div>
 
-                    <div>
+                    <div class="input">
                         <div class="from">
                             <h3>From</h3>
                             <input type="text" placeholder="  Departing from">
@@ -49,12 +50,12 @@
                             <input type="text" placeholder="  Arriving at">
                         </div>
                     </div>
-     
+
                     <div class="button-dates">
                         <input type="button" id="button" value="Search and find dates">
                     </div>
+                </div>
             </div>
-        </div>
         </section>
 
         <section class="ofertas">
@@ -62,7 +63,7 @@
                 <h1>God Offers Right now</h1>
                 <h2>Up to <strong>50%</strong> discount</h2>
             </div>
-            <div class="imagens">
+            <div class="imagens" id="imagens-ofertas">
                 <div class="img1">
                     <img src="imagens/cinqueterre.jpg" alt="">
                 </div>
@@ -72,15 +73,71 @@
                         <img class="baixo" src="imagens/pisa.jpg" alt="">
                     </div>
                     <div>
-                        <img class="acima"  src="imagens/sanfran.jpg" alt="">
+                        <img class="acima" src="imagens/sanfran.jpg" alt="">
                         <img class="baixo" src="imagens/paris.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="imagens-coluna">
+                <ul>
+                    <li> <img src="imagens/cinqueterre.jpg" alt=""></li>
+                    <li><img src="imagens/newyork.jpg" alt=""></li>
+                    <li><img src="imagens/pisa.jpg" alt=""></li>
+                    <li><img src="imagens/sanfran.jpg" alt=""></li>
+                    <li><img src="imagens/paris.jpg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+        <section class="nature">
+            <div>
+                <div class="sobre">
+                    <h1>Explore Nature</h1>
+                    <h2>Travel with us and see nature at its finest</h2>
+                </div>
+                <div class="containers-imagens">
+                    <div class="bloco1">
+                        <img>
+                        <h1>West Coast, Norway</h1>
+                        <h3>Roundtrip from $79</h3>
+                        <h2>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</h2>
+                        <span>Buy Tickets</span>
+                    </div>
+                    <div class="bloco2">
+                        <img>
+                        <h1>Mountains, Austria</h1>
+                        <h3>One-way from $39</h3>
+                        <h2>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</h2>
+                        <span>Buy Tickets</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let flight = document.querySelector(".flight");
+        let hotel = document.querySelector(".hotel");
+        let hental = document.querySelector(".hental");
+
+        flight.addEventListener("click", function () {
+            flight.style.backgroundColor = 'rgb(255, 32, 32)';
+            hotel.style.backgroundColor = 'black';
+            hental.style.backgroundColor = 'black';
+        });
+        hotel.addEventListener("click", function () {
+            hotel.style.backgroundColor = 'rgb(255, 32, 32)';
+            flight.style.backgroundColor = 'black';
+            hental.style.backgroundColor = 'black';
+        });
+        hental.addEventListener("click", function () {
+            hotel.style.backgroundColor = 'black';
+            flight.style.backgroundColor = 'black';
+            hental.style.backgroundColor = 'rgb(255, 32, 32)';
+        });
+    </script>
 </body>
+
 </html>
