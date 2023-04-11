@@ -20,6 +20,7 @@
                 <!--<img  src="icos/pino-de-localizacao.png" class="logo"> -->
             </div>
             <div class="search">
+                <input type="text">
                 <i class="large material-icons">search</i>
             </div>
         </div>
@@ -100,21 +101,97 @@
                         <h1>West Coast, Norway</h1>
                         <h3>Roundtrip from $79</h3>
                         <h2>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</h2>
-                        <div class="span"  id="span2"><span >Buy Tickets</span></div>
+                        <div class="span" id="span2"><span>Buy Tickets</span></div>
                     </div>
                     <div class="bloco">
                         <img class="img-fluid" src="imagens/mountains.jpg">
                         <h1>Mountains, Austria</h1>
                         <h3>One-way from $39 </h3>
                         <h2>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</h2>
-                        <div class="span" id="span"><span >Buy Tickets</span></div>
+                        <div class="span" id="span"><span>Buy Tickets</span></div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div>
+                <div>
+                    <h1>Get The best offers first!</h1>
+                </div>
+                <div>Join our newsletterst.</div>
+                <div>
+                    E-mail<br>
+                    <input type="email" placeholder="You Email Address">
+                </div>
+                <div>
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </section>
+        <section class="contato">
+            <div>
+                <div>
+                    <h1>Contact</h1>
+                </div>
+                <div>
+                    <p>Let us book your next trip!</p>
+                </div>
+                <div class="icones_contato">
+                    <div><a href="">
+                            <img src="https://img.icons8.com/android/24/null/marker.png" />
+                            Chicaco, US</a></div>
+                    <div><a href="">
+                            <img src="https://img.icons8.com/metro/26/null/phone.png" />
+                            Phone: +0024501</a></div>
+                    <div><a href="">
+                            <img src="https://img.icons8.com/metro/26/null/new-post.png" />
+                            Email: mail@email.com</a></div>
+                </div>
+                <div class="inputs">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Message">
+                </div>
+                <div>
+                    <button>Send Message</button>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        
+        <div class="rodape">
+            <div>Find Us On</div>
+            <div class="links_sociais">
+                <img src="https://img.icons8.com/material-rounded/24/null/facebook.png"/>
+                <img src="https://img.icons8.com/ios/50/null/instagram-new--v1.png"/>
+                <img src="https://img.icons8.com/sf-regular-filled/48/null/snapchat-circled-logo.png"/>
+                <img src="https://img.icons8.com/windows/32/null/pinterest-p.png"/>
+                <img src="https://img.icons8.com/ios-filled/50/null/twitter.png"/>
+                <img src="https://img.icons8.com/ios-glyphs/30/null/linkedin.png"/>
+                <a href="">
+                </a>
+                <a href="">
+                </a>
+                <a href="">
+                </a>
+                <a href="">
+                </a>
+                <a href="">
+                </a>
+                <a href="">
+                </a>
+              
+            </div>
+            <div class="copyright">&copy;
+                Desafio do Canal 
+                <a href="https://www.youtube.com/@DevMediaBrasil">DevMedia</a>.
+                Esta edição foi feita por 
+                <a href="https://github.com/Joicemar"> Joicemar S Morais</a>
+            </div>
+            <div class="codigo_fonte">
+                <a href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/projeto_estagio" target="_blank">Código fonte</a>
+            </div>
+        </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -124,6 +201,9 @@
         let hotel = document.querySelector(".hotel");
         let hental = document.querySelector(".hental");
 
+        function click() {
+
+        }
         flight.addEventListener("click", function () {
             flight.style.backgroundColor = 'rgb(255, 32, 32)';
             hotel.style.backgroundColor = 'black';

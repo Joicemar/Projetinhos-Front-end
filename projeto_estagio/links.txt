@@ -3,3 +3,5 @@ https://materializecss.com/icons.html
 https://www.flaticon.com/
 
 https://ionic.io/ionicons
+
+https://icons8.com.br
