@@ -75,6 +75,20 @@ section
     display: flex;
     justify-content: center;
 }
+.search input {
+    width: 0;
+    background-color: rgb(238, 238, 238);
+    opacity: 0;
+    transition: .4s;
+    font-size: 14pt;
+    border: solid 1px #dadada;
+    padding-left: 16px;
+}
+.search:hover input{
+    width: 400px;
+    display: block;
+    opacity: 1;
+}
 
 /*Formulário*/
 .menu .formulario {
@@ -99,7 +113,11 @@ main {
         display: flex;
         flex-direction: column;
     }
-
+    .search:hover input{
+        width: 220px;
+        display: block;
+        opacity: 1;
+    }
     .menu .formulario {
         margin-top: 66px;
         width: 100%;
@@ -172,8 +190,30 @@ main {
     .containers-imagens {
         flex-direction: column;
     }
+    subscribe{
+        margin-top: 140px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex: 1;
+    }
 }
-
+@media (max-width: 450px){
+    .search:hover input{
+        display: block;
+        width: 120px;
+        opacity: 1;
+    }
+}
+@media (max-width: 330px){
+    .search:hover input{
+        width: 90px;
+        display: block;
+        opacity: 1;
+    }
+}
 @media (min-width: 651px) and (max-width: 768px) {
     .menu .formulario {
         width: max(90%, 300px);
@@ -470,7 +510,7 @@ main{
 /*Subscribe section*/
 .subscribe
 {
-    height: 300px;
+    height: auto;
 }
 .subscribe > div
 {
@@ -610,7 +650,10 @@ footer .rodape .links_sociais img
 {
     width: 40px;
     margin: 5px;
+    cursor: pointer;
 }
-footer .rodape .links_sociais a
+footer .rodape .links_sociais
 {
+    display: flex;
+    flex-wrap: wrap;
 }
