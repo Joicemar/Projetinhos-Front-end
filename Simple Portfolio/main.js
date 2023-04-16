@@ -1,5 +1,5 @@
 let typingText = new Typed("#text", {
-  strings: ["Joicemar", "Programador", "Desenvolvedor front-end"],
+  strings: ["Joicemar", "Programador", "Dev front-end"],
   loop: true,
   backDelay: 3000,
   typeSpeed: 100,
