@@ -168,26 +168,36 @@ header {
     border-radius: 4px;
     box-shadow: 0px 0px 5px 1px #222;
     overflow-y: scroll;
+    gap: 50px;
 }
 .menu .menu-bars ul li
 {
     color: #d6d6d6;
     font-family: 'Roboto';
-    padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
     content: icon;
     font-size: 12pt;
     text-transform: uppercase;
     display: none;
     opacity: 0;
     transition: .5s;
-    margin-bottom: 50px;
+    margin-top: 30px ;
+    margin-bottom: 30px ;
 }
 .menu .menu-bars ul li a
 {
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     text-decoration: none;
     color: rgb(204, 204, 204);
+}
+.menu .menu-bars ul h2
+{
+    font-family: 'Roboto';
+    font-size: 12pt;
+    font-weight: 400;
+    color: #dbdbdb;
+    text-transform: uppercase;
 }
 .menu.active .menu-bars ul li {
     display: block;
