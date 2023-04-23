@@ -7,60 +7,128 @@
     <title>Joicemar's Personal Site</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </head>
 
 <body class="body day">
     <div class="container">
         <header>
-            <div class="logo">My<span>Portfolio</span>_</div>
-        </header>
-        <div class="menu">
+            <div class="logo">My<span>Portfolio_</span></div>
+            <div class="menu">
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">Início</a>
+                            <div class="menuline"></div>
+                        </li>
+                        <li>
+                            <a href="#">Projetos</a>
+                            <div class="menuline"></div>
+                        </li>
+                        <li>
+                            <a href="#">Contato</a>
+                            <div class="menuline"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <div class="bars">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
-            <nav class="menu-bars">
-                <ul>
-                    <h2>Projetos</h2>
-                    <li><a href="https://spectacular-gnome-fa4775.netlify.app" target="_blank">Site de viagens</a></li>
-                    <li><a href="#">Em breve!</a></li>
-                    <li><a href="#">Em breve!</a></li>
-                    <li><a href="#">Em breve!</a></li>
-                    <li><a href="#">Em breve!</a></li>
-                </ul>
-            </nav>
-        </div>
+        </header>
         <main>
             <section class="sobre">
                 <div class="content">
                     <div class="imagens">
-                        <img class="fundo" src="fundo.png" alt="">
-                        <img class="me" src="foto.png" alt="">
+                        <div class="fundo">
+                            <div class="blob">
+                                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                                    <defs>
+                                        <pattern id="image" patternUnits="userSpaceOnUse" width="500" height="500">
+                                            <image id="me" class="blob-image"
+                                                xlink:href="https://scontent.fpoa2-1.fna.fbcdn.net/v/t1.18169-9/18556112_1036324009833274_3070926521413590569_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeHXw3dsSn5aFZKx4QTiX7jeIE29L_Qt7rYgTb0v9C3uttcaPXp6efNW3SxJR2UT79u73G7WUhWjFR1Z5fXBjF12&_nc_ohc=hK7zdwtoPvoAX_qWsFh&_nc_ht=scontent.fpoa2-1.fna&oh=00_AfAm2q1-_b4zhTFrFdBXL1NmClgt8YUro43K6Z9DTv6ikA&oe=6469637B"
+                                                width="650" height="650" />
+                                        </pattern>
+                                    </defs>
+                                    <path fill="url(#image)">
+                                        <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                                        values="
+                                        M430.5,352.5Q368,455,246.5,460.5Q125,466,106.5,358Q88,250,118,161.5Q148,73,252,70Q356,67,424.5,158.5Q493,250,430.5,352.5Z;
+                                        M386,341.5Q356,433,266.5,404.5Q177,376,120.5,313Q64,250,105,159.5Q146,69,253.5,63.5Q361,58,388.5,154Q416,250,386,341.5Z;
+                                        M397,330.5Q343,411,246,417.5Q149,424,87,337Q25,250,98.5,182.5Q172,115,271.5,78Q371,41,411,145.5Q451,250,397,330.5Z;
+                                        M413.5,345Q360,440,255,431.5Q150,423,115,336.5Q80,250,107.5,150.5Q135,51,252,47.5Q369,44,418,147Q467,250,413.5,345Z;
+                                        M404,346.5Q361,443,250.5,442Q140,441,93.5,345.5Q47,250,89,147Q131,44,245,53Q359,62,403,156Q447,250,404,346.5Z;
+                                        M420.5,350Q365,450,266.5,421Q168,392,91.5,321Q15,250,76.5,153Q138,56,242.5,69Q347,82,411.5,166Q476,250,420.5,350Z;
+                                        M391,353.5Q370,457,267,428Q164,399,127.5,324.5Q91,250,110.5,146Q130,42,238,62.5Q346,83,379,166.5Q412,250,391,353.5Z;
+                                        M404,346.5Q361,443,250.5,442Q140,441,93.5,345.5Q47,250,89,147Q131,44,245,53Q359,62,403,156Q447,250,404,346.5Z;
+                                        M430.5,352.5Q368,455,246.5,460.5Q125,466,106.5,358Q88,250,118,161.5Q148,73,252,70Q356,67,424.5,158.5Q493,250,430.5,352.5Z;
+                                        ">
+                                            <!--Add 1st and last value somo for loop
+                                        aimation-->
+                                        </animate>
+                                    </path>
+                                </svg>
+                            </div>
+                            <!--To add glow effects-->
+                            <div class="blob">
+                                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                                    <defs>
+                                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color: rgb(146, 202, 255);"></stop>
+                                            <stop offset="100%" style="stop-color: rgb(217, 161, 255);"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#gradient)">
+                                        <animate attributeName="d" dur="10000ms" repeatCount="indefinite"
+                                        values="
+                                        M430.5,352.5Q368,455,246.5,460.5Q125,466,106.5,358Q88,250,118,161.5Q148,73,252,70Q356,67,424.5,158.5Q493,250,430.5,352.5Z;
+                                        M386,341.5Q356,433,266.5,404.5Q177,376,120.5,313Q64,250,105,159.5Q146,69,253.5,63.5Q361,58,388.5,154Q416,250,386,341.5Z;
+                                        M397,330.5Q343,411,246,417.5Q149,424,87,337Q25,250,98.5,182.5Q172,115,271.5,78Q371,41,411,145.5Q451,250,397,330.5Z;
+                                        M413.5,345Q360,440,255,431.5Q150,423,115,336.5Q80,250,107.5,150.5Q135,51,252,47.5Q369,44,418,147Q467,250,413.5,345Z;
+                                        M404,346.5Q361,443,250.5,442Q140,441,93.5,345.5Q47,250,89,147Q131,44,245,53Q359,62,403,156Q447,250,404,346.5Z;
+                                        M420.5,350Q365,450,266.5,421Q168,392,91.5,321Q15,250,76.5,153Q138,56,242.5,69Q347,82,411.5,166Q476,250,420.5,350Z;
+                                        M391,353.5Q370,457,267,428Q164,399,127.5,324.5Q91,250,110.5,146Q130,42,238,62.5Q346,83,379,166.5Q412,250,391,353.5Z;
+                                        M404,346.5Q361,443,250.5,442Q140,441,93.5,345.5Q47,250,89,147Q131,44,245,53Q359,62,403,156Q447,250,404,346.5Z;
+                                        M430.5,352.5Q368,455,246.5,460.5Q125,466,106.5,358Q88,250,118,161.5Q148,73,252,70Q356,67,424.5,158.5Q493,250,430.5,352.5Z;
+                                        ">
+                                            <!--Add 1st and last value somo for loop
+                                        aimation-->
+                                        </animate>
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                     <div class="span">
-                        <h3 class="title">Hey_</h3>
-                        <h2>Eu sou <span class="text" id="text"></span></h2>
+                        <h3 class="title" id="hey">Hey_</h3>
+                        <strong>
+                            <h2><span class="text" id="text"></span></h2>
+                        </strong>
                     </div>
                 </div>
                 <div class="habilidades">
                     <div class="skills">
                         <h3 class="title">Habilidades:</h3>
                         <ul>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Javascript</li>
-                            <li>Java</li>
+                            <li> <ion-icon class="icon" size="large" name="logo-html5"></ion-icon> <strong>HTML5</strong></li>
+                            <li><ion-icon class="icon" size="large" name="logo-CSS3"></ion-icon> <strong>CSS3</strong></li>
+                            <li><ion-icon class="icon" size="large" name="logo-Javascript"></ion-icon> <strong>Javascript</strong></li>
+                            <li><i class='bx bxl-java'></i><strong>Java</strong></li>
                         </ul>
                     </div>
                     <div class="texto">
                         <h3 class="title">Sobre: </h3>
                         <p>
-                            Olá! Eu sou Joicemar da Silva Morais.
-                            Estou cursando Análise e Desenvolvimento de Sistemas
-                            e adoro desenvolver websites responsivos. Busco conhecimentos
-                            de diversas fontes.
+                            Olá! <strong>Me chamo Joicemar da Silva Morais</strong>.
+                            Estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong>
+                            e adoro desenvolver <strong>websites responsivos</strong>. Busco conhecimentos
+                            de diversas fontes. Em <strong>constante</strong> atualização.
                         </p>
                     </div>
                 </div>
@@ -88,15 +156,19 @@
                         <div class="moon">
                             <ion-icon class="moon-ico" name="moon"></ion-icon>
                         </div>
-                        <div id="box">
-                            <div id="ball"></div>
+                        <div id="day-select">
+                            <div id="box">
+                                <div id="ball"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
-
+    <div class="circle" id="circle">
+        <div id="point"></div>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>

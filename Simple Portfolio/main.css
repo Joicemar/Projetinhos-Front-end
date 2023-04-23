@@ -13,22 +13,114 @@ html,
 body {
     height: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
 }
-.day-icos
-{
+
+.logo {
+    margin-left: 32px;
+    font-weight: 500;
+    color: rgb(65, 68, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 22pt;
+    transition: .5s;
+}
+
+.logo span {
+    text-shadow: 1px 1px 3px rgb(119, 119, 119);
+    color: rgb(230, 230, 230);
+    transition: .5s;
+}
+
+.sobre .content>div {
+    /*Para manter a divisão caso quebrar a linha do textinho*/
+    flex: 1;
+}
+
+.sobre .content>.imagens {
+    /*Para manter a divisão caso quebrar a linha do textinho*/
+    flex: 3;
+}
+
+.sobre .content .span h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 14pt;
+    transition: .8s;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.span strong h2 {
+    transition: .8s;
+    font-weight: 500;
+    font-size: 20pt;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(223, 223, 223);
+}
+
+.body.day #text {
+    color: #333;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #0000003d;
+    background-color: #3333331c;
+    z-index: 999;
+    /* permite que os cliques passem através do círculo */
+    pointer-events: none;
+    /*transform: translate(-50%, -50%);*/
+    display: flex;
+}
+#point {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    top: 9px;
+    color: #000;
+}
+
+.blob {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    z-index: 7;
+}
+
+.blob:nth-child(2) {
+    filter: blur(10px);
+    position: absolute;
+    opacity: .5;
+    z-index: 6;
+    top: 0px;
+}
+
+.blob-image {
+    transform: translateX(-50px) translateY(0px);
+}
+
+.day-icos {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
-.moon-ico
-{
+
+.moon-ico {
     width: 33px;
     height: 33px;
     margin-left: 10px;
     color: #111;
-    animation: animateMoon 3.5s ease-in-out infinite;
+    animation: animateMoon 4s ease-in-out infinite;
 }
+
 @keyframes animateMoon {
 
     0%,
@@ -40,6 +132,12 @@ body {
         transform: translateY(-20px);
     }
 }
+
+#day-select {
+    padding: 10px;
+    cursor: pointer;
+}
+
 #box {
     width: 35px;
     height: 15px;
@@ -62,6 +160,7 @@ body {
     position: relative;
     transition: .2s;
 }
+
 .container {
     width: 100%;
     height: auto;
@@ -75,7 +174,8 @@ body {
     rgb(230, 216, 201), rgb(170, 175, 204));
     */
     background-color: #030303;
-    transition: .3s;
+    transition: .5s;
+    overflow-y: auto;
 }
 
 .body.day #ball {
@@ -87,7 +187,6 @@ body {
 }
 
 .body.day {
-
     background-color: rgb(230, 230, 230);
 }
 
@@ -104,30 +203,99 @@ body {
 .body.day h2,
 .body.day h3,
 .body.day li,
-.body.day .logo {
+.body.day .logo span {
     color: #333;
+    transition: .5s;
 }
+
 header {
     display: flex;
     align-items: center;
-    font-size: 20pt;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 12px 0px 12px 0px;
     width: 100%;
+    height: 40px;
+    padding-top: 20px;
     position: relative;
     transition: .3s;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .menu {
-    position: absolute;
-    position: fixed;
-    right: 10px;
-    top: 20px;
-    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
-.bars
-{
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    margin-right: 32px;
+    max-width: 500px;
+    justify-content: space-around;
+
+}
+
+.nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.nav ul li .menuline {
+    width: 0%;
+    height: 1px;
+    background-color: rgb(108, 108, 143);
+    transition: .3s;
+}
+
+.body.night .nav ul li .menuline {
+    background-color: #a4a3dd;
+}
+
+.nav ul li:hover>.menuline {
+    width: 100%;
+}
+
+.body.night .nav ul li a {
+    color: #f0f0f0;
+}
+
+.body.night .nav ul li:hover>a {
+    color: rgb(176, 176, 209);
+    color: rgba(255, 243, 139, 0.712);
+}
+
+.nav ul li a {
+    font-size: 15pt;
+    font-family: "Courier New", Courier, monospace;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav ul li:hover>a {
+    color: rgba(84, 84, 148, 0.726);
+}
+
+strong:hover {
+    color: #000;
+    text-shadow: 1px 1px 1px black;
+}
+
+.body.night strong:hover {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px white;
+}
+
+.bars {
     padding: 12px;
     cursor: pointer;
     position: absolute;
@@ -137,8 +305,8 @@ header {
     right: 30px;
     top: -15px;
 }
-.menu .bars div
-{
+
+.menu .bars div {
     width: 51px;
     height: 3px;
     background-color: #333;
@@ -146,16 +314,18 @@ header {
     border-radius: 7px;
     transition: .1s;
 }
-.menu .menu-bars
-{
+
+.menu .menu-bars {
     margin-top: 70px;
     width: 0px;
     transition: .3s;
 }
-.menu.active .menu-bars{
+
+.menu.active .menu-bars {
     display: block;
     width: 50vw;
 }
+
 .menu .menu-bars ul {
     list-style: none;
     background-color: #211935;
@@ -170,109 +340,63 @@ header {
     overflow-y: scroll;
     gap: 50px;
 }
-.menu .menu-bars ul li
-{
+
+.menu .menu-bars ul li {
     color: #d6d6d6;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     content: icon;
     font-size: 12pt;
     text-transform: uppercase;
     display: none;
     opacity: 0;
     transition: .5s;
-    margin-top: 30px ;
-    margin-bottom: 30px ;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
-.menu .menu-bars ul li a
-{
+
+.menu .menu-bars ul li a {
     padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
     text-decoration: none;
     color: rgb(204, 204, 204);
 }
-.menu .menu-bars ul h2
-{
+
+.menu .menu-bars ul h2 {
     font-family: 'Roboto';
     font-size: 12pt;
     font-weight: 400;
     color: #dbdbdb;
     text-transform: uppercase;
 }
+
 .menu.active .menu-bars ul li {
     display: block;
     opacity: 1;
 }
-.menu.active .bars .line1 
-{
+
+.menu.active .bars .line1 {
     position: relative;
     width: 55px;
 }
-.menu.active .bars .line2 
-{
+
+.menu.active .bars .line2 {
     position: relative;
     width: 40px;
 }
-.menu.active .bars .line3
-{
+
+.menu.active .bars .line3 {
     position: relative;
     width: 25px;
 }
+
 .menu .menu-bars ul li:hover {
     opacity: .5;
 }
 
-.logo {
-    margin-left: 32px;
-    font-weight: 700;
-    color: rgb(209, 209, 209);
-    font-family: 'Raleway';
-    font-size: 22pt;
-    text-shadow: 1px 1px 3px rgb(122, 122, 122);
-}
-
-.imagens .me {
-    width: 130px;
-    z-index: 1;
+.imagens .fundo {
+    width: 120px;
     position: absolute;
-    margin-left: 83px;
-    top: 300px;
-    animation: animateMe 5s ease-in-out infinite;
-
-}
-@keyframes animateMe {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(30px);
-    }
-}
-.imagens .fundo{
-    width: 180px;
-    position: absolute;
-    margin-left: 40px;
-    top: 290px;
-    rotate: 16deg;
-    animation: animateFundo 5s ease-in-out infinite;
-}
-@keyframes animateFundo {
-
-    0%,
-    100% {
-        transform: translateX(0px);
-    }
-
-    50% {
-        transform: translateX(30px);
-    }
-}
-
-#text {
-    color: rgb(250, 96, 96);
 }
 
 main {
@@ -295,9 +419,9 @@ main {
     align-items: start;
     flex: 1;
 }
+
 .sobre .content .imagens,
-.sobre .content .span
-{
+.sobre .content .span {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -321,23 +445,45 @@ main {
     flex-direction: column;
     gap: 10px;
     color: rgb(231, 231, 231);
-    font-family: 'Poppins', sans-serif;
     flex: 1;
 }
 
+.skills h3,
+.texto h3 {
+    font-family: "Courier New", Courier, monospace;
+}
+
 .skills ul {
-    font-size: 17pt;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    font-family: "Courier New", Courier, monospace;
     margin-bottom: 40px;
     margin-top: 10px;
+    list-style: none;
 }
 
 .skills ul li {
     margin-bottom: 7px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+body.day .skills ul li {
+    margin-bottom: 7px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.content h2 {
-    font-size: 20pt;
+body.night .skills ul li:hover>strong {
+    color: #ffffff;
+    text-shadow: 2px 1px 4px white;
+}
+
+body.day .skills ul li:hover>strong {
+    color: #000000;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 .title {
@@ -351,11 +497,11 @@ main {
     font-size: 20px;
     margin-top: 10px;
     max-width: 750px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5;
+    transition: 0s;
 }
 
-.skills ul {
-    list-style: none;
-}
 .contact {
     position: fixed;
 }
@@ -368,8 +514,11 @@ main {
     z-index: 12;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     position: fixed;
+}
+
+.panel>.day-icos {
+    flex: 1;
 }
 
 .panel .icos {
@@ -379,17 +528,34 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
+    flex: 5;
 }
+
+i {
+    color: #ffffff;
+    font-size: 26pt;
+    margin-left: 1px;
+    transition: .4s;
+    border-radius: 2px;
+}
+
+body.day i {
+    color: #272727;
+}
+
 .panel .icos a .icon {
     color: #cccccc;
-    width: 33px;
+    width: 34px;
     padding: 20px;
     padding-right: 20px;
     transition: .4s;
 }
 
 .panel .icos a .icon:hover {
-    color: rgb(120, 118, 255);
+    color: rgb(100, 149, 237);
+    width: 40px;
+    height: 40px;
+    padding: 16px;
 }
 
 .body.day .panel .icos a .icon {
@@ -397,11 +563,16 @@ main {
 }
 
 .body.day .panel .icos a .icon:hover {
-    color: rgb(0, 89, 255);
+    color: rgb(100, 149, 237);
+    width: 40px;
+    height: 40px;
+    padding: 16px;
 }
+
 .body.body.night .moon-ico {
-    color: rgb(255, 244, 142);
+    color: rgb(255, 255, 255);
 }
+
 .body.body.night .menu .bars div {
     /*
     background-image: linear-gradient( 
@@ -412,24 +583,44 @@ main {
     background-color: #ddd;
 }
 
+.body.night .circle {
+    border-color: #cfcfcf69;
+    background-color: #ffffff23;
+}
+
+.body.night #point {
+    background-color: #d1d1d14d;
+}
+
+.body.day #point {
+    background-color: #00000048;
+}
+
 @media (max-width:820px) {
     .sobre {
         flex-direction: column;
-        font-size: 9pt;
+        height: 900px;
     }
-    .imagens .me{
+
+    .blob {
         position: relative;
-        top: -90px;
-        margin-left: 45px;
+        top: -80px;
     }
-    .imagens .fundo{
+
+    .blob:nth-child(2) {
+        top: -80px;
+    }
+
+    .imagens .fundo {
         position: relative;
         top: 70px;
         margin-left: 0px;
     }
+
     main {
         margin-left: 100px;
     }
+
     .skills {
         font-size: 5pt;
     }
@@ -442,18 +633,64 @@ main {
         color: #c0c0c0;
         font-size: 12pt;
     }
+
+    #hey {
+        font-size: 10pt;
+    }
+
+    .sobre .span {
+        margin-left: 20px;
+    }
+
+    .sobre .span h2 {
+        font-size: 17pt;
+    }
+
     .panel .icos a .icon {
         width: 33px;
     }
+
     .panel .icos {
         gap: 10px;
     }
+
     .bars {
         right: 10px;
         top: -15px;
     }
 }
-@media (max-width:440px){
+
+@media (max-width: 600px) {
+    .sobre .span {
+        margin-left: 0px;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    html,
+    body {
+        cursor: auto;
+    }
+}
+
+@media (max-width:510px) {
+    .imagens {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagens .me {
+        left: 10px;
+    }
+
+    .imagens .fundo {
+        left: -80px;
+    }
+}
+
+@media (max-width:440px) {
     main {
         margin-left: 80px;
     }
