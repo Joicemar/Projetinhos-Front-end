@@ -205,24 +205,6 @@ header.sticky {
     font-size: 24px;
     font-weight: 600;
 }
-/*------------*/
-.about{
-    padding-bottom: 300px;
-    padding-top: 100px;
-}
-.services {
-    height: auto;
-    padding-bottom: 450px;
-}
-.services, .portfolio {
-    padding-top: 100px;
-    padding-bottom: 300px;
-    height: auto;
-}
-.contact {
-    padding-top: 0;
-}
-/*------------*/
 
 .services-content {
     display: grid;
@@ -482,6 +464,7 @@ form textarea {
     .contact {
         grid-template-columns: 1fr;
     }
+
 }
 
 @media (max-width: 830px) {
@@ -516,6 +499,12 @@ form textarea {
     .cursor1, .cursor2 {
         display: none;
     }
+}
+@media (max-width: 500px) {
+    .services {
+        margin-top: 450px;
+    }
+
 }
 .cursor1{
     position: absolute;
