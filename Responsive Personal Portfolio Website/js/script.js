@@ -19,11 +19,50 @@ window.onscroll = () => {
 }
 
 const sr = ScrollReveal ({
-    distance: '25px',
-    duration: 2500,
+    distance: '125px',
+    duration: 1500,
     reset: true
 })
 
-sr.reveal('.home-text', { delay:190, origin: 'bottom' })
+sr.reveal('.home-text', { delay:190, origin: 'right' })
 
-sr.reveal('.about, .services, .portfolio, .contact', { delay:250, origin: 'top' })
+sr.reveal('.services, .portfolio, .contact', { delay:250, origin: 'top' })
+
+sr.reveal('.about', { delay:250, origin: 'left' })
+
+//Cursor:
+let cursor1 = document.querySelector('.cursor1');
+let cursor2 = document.querySelector('.cursor2');
+
+window.onmousemove = (e) =>{
+    cursor1.style.top = e.pageY + 'px';
+    cursor1.style.left = e.pageX + 'px';
+    cursor2.style.top = e.pageY + 'px';
+    cursor2.style.left = e.pageX + 'px';
+}
+let maxwidth =  window.innerWidth;
+
+document.addEventListener('mouseleave', () => {
+    if(maxwidth > 600){
+        cursor1.style.display = 'none';
+        cursor2.style.display = 'none';
+    }
+});
+document.addEventListener('mouseenter', () => {
+    if(maxwidth > 600){
+        cursor1.style.display = 'block';
+        cursor2.style.display = 'block';
+    }
+});
+
+let links = document.querySelectorAll('a').forEach(links =>{
+
+    links.onmouseenter = () =>{
+        cursor1.classList.add('active');  
+        cursor2.classList.add('active');  
+    }
+    links.onmouseleave = () =>{
+        cursor1.classList.remove('active');  
+        cursor2.classList.remove('active');  
+    }
+})

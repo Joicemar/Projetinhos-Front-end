@@ -145,6 +145,8 @@ header.sticky {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
+    height: 100vh;
+    margin-bottom: 64px;
 }
 
 .blob {
@@ -203,6 +205,24 @@ header.sticky {
     font-size: 24px;
     font-weight: 600;
 }
+/*------------*/
+.about{
+    padding-bottom: 300px;
+    padding-top: 100px;
+}
+.services {
+    height: auto;
+    padding-bottom: 450px;
+}
+.services, .portfolio {
+    padding-top: 100px;
+    padding-bottom: 300px;
+    height: auto;
+}
+.contact {
+    padding-top: 0;
+}
+/*------------*/
 
 .services-content {
     display: grid;
@@ -418,6 +438,7 @@ form textarea {
     background: var(--main-color);
     font-size: 50px;
     border-radius: 0.5rem;
+    margin: 7px;
 }
 
 @media (max-width: 1325px) {
@@ -490,4 +511,39 @@ form textarea {
         --h1-font: 3.7rem;
         --h2-font: 2.7rem;
     }
+}
+@media (max-width: 600px){
+    .cursor1, .cursor2 {
+        display: none;
+    }
+}
+.cursor1{
+    position: absolute;
+    top: 0px; left: 0px;
+    height: .4rem; width: .4rem;
+    background: var(--main-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+    transition: .14s linear;
+}
+.cursor1.active {
+    height: 4rem;
+    width: 4rem;
+    opacity: .3;
+}
+.cursor2{
+    position: absolute;
+    top: 500px; left: 500px;
+    height: 2.5rem; width: 2.5rem;
+    border: .1rem solid var(--main-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+}
+.cursor2.active{
+    display: none;
+    opacity: 0;
 }
