@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Galery</h1>
+        <div class="image-container">
+            <div class="image"><img src="img/cicle.jpeg"></div>
+            <div class="image"><img src="img/door.jpeg"></div>
+            <div class="image"><img src="img/flower.jpeg"></div>
+            <div class="image"><img src="img/jpn.jpeg"></div>
+            <div class="image"><img src="img/read.jpeg"></div>
+            <div class="image"><img src="img/nature.jpeg"></div>
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="img/cicle.jpeg">
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
