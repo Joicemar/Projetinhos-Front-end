@@ -11,11 +11,14 @@
     background-color: #191919;
 }
 .about img{
-    height: auto;
     width: 420px;
+    height: 650px;
+    object-fit: cover;
 }
 .about-text{
     width: 550px;
+    padding-left: 16px;
+    margin-bottom: 50px;
 }
 .main{
     width: 1130px;
@@ -60,4 +63,21 @@ button:hover{
     background: transparent;
     border: 2px solid #f9004d;
     cursor: pointer;
+}
+@media (max-wdth: 1100){
+    img{
+        width: 30%;
+        height: auto;
+    }
+}
+@media (max-width: 720px){
+    .main{
+        flex-direction: column-reverse;
+        align-items: center; 
+        justify-content: center;
+    }
+    .about-text {
+        width: 90%;
+        margin: auto;
+    }
 }
