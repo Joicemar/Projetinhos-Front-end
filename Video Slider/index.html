@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vide Slider</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    
+    <section>
+        <video id="slider" autoplay muted loop>
+            <source src="pexels-fauxels.mp4" type="video/mp4">
+        </video>
+        <ul class="navigation">
+            <li onclick="videoUrl(' pexels-fauxels.mp4')"><img src="img1.jpg" alt=""></li>
+            <li onclick="videoUrl(' pexels-innorecords.mp4')" ><img src="img2.jpg" ></li>
+            <li onclick="videoUrl(' pexels-kelly-.mp4')"><img src="img3.jpg" alt=""></li>
+            <li onclick="videoUrl(' pexels-taryn-elliott.mp4')"><img src="img4.jpg" alt=""></li>
+        </ul>
+    </section>
+
+    <script>
+        function videoUrl(params) {
+            document.getElementById("slider").src = params;
+        }
+    </script>
+</body>
+</html>
