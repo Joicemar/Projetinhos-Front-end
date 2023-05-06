@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+
+    <form action="">
+
+        <input type="email" id="meuInput" placeholder=" Email...">
+        <button onclick="pegarValor()">Pegar email</button>
+        <span id="span"></span>
+    </form>
+    <script>
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function pegarValor() {
+            const input = document.getElementById("meuInput");
+            const span = document.getElementById("span");
+
+            if (!validateEmail(input.value)) {
+                span.textContent = "Email inválido";
+            } else {
+                span.textContent = "Enviado";
+            }
+        }
+        /*
+        As alterações feitas foram:
+        Substituição do método contains por includes, já que contains não 
+        é um método válido em strings em JavaScript;
+        Adição de chaves nas estruturas de controle if e else, para evitar
+        possíveis erros de interpretação;
+        Substituição do método append por textContent, para substituir o 
+        conteúdo do elemento span em vez de apenas adicioná-lo.
+        */
+    </script>
+</body>
+
+</html>
