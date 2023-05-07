@@ -34,13 +34,25 @@ body {
     position: absolute;
     bottom: 0;
     top: 0;
-    background-color: rgb(240, 240, 240);
+    background-color: hsl(11, 100%, 91%);
     margin: auto;
     border-radius: 7px;
     display: flex;
     overflow: hidden;
+    z-index: -1;
 }
-
+.container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-49%, 12%);
+    width: 100%;
+    border-radius: 100% 0% 0% 0;
+    background-color: rgb(233, 233, 233);
+    z-index: -2;
+}
 .hero {
     width: 45%;
     overflow: hidden;
@@ -152,7 +164,8 @@ input:focus {
         width: 375px;
         padding: 0;
         overflow: initial;
-        height: 100vh;
+        height: min(750px, 100vh);
+        background-color: rgb(233, 233, 233);
     }
     .content{
         padding: 0;
