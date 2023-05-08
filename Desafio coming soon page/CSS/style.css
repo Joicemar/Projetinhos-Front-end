@@ -5,14 +5,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: .5s ease;
 }
-
 :root {
     --Desaturated-Red: hsl(0, 36%, 70%);
     --Soft-Red: hsl(0, 93%, 68%);
     --Dark-Grayish-Red: hsl(0, 6%, 24%);
 
-    --gradient: linear-gradient(to right, hsl(19, 100%, 85%),  hsl(14, 100%, 71%));
+    --gradient: linear-gradient( 145deg, hsl(0, 0%, 99%),  hsl(14, 100%, 90%));
     --gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 66%, 52%));
 
     --main-font: 'Josefin Sans', sans-serif;
@@ -34,7 +34,7 @@ body {
     position: absolute;
     bottom: 0;
     top: 0;
-    background-color: rgb(255, 221, 205);
+    background-image: var(--gradient);
     margin: auto;
     border-radius: 7px;
     display: flex;
@@ -50,7 +50,7 @@ body {
     transform: translate(-49%, 12%);
     width: 100%;
     border-radius: 100% 0% 0% 0;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(250, 250, 250);
     z-index: -2;
 }
 .hero {
@@ -95,7 +95,9 @@ body {
     letter-spacing: 12px;
     margin-top: 70px;
 }
-
+h1:hover{
+    transform: scale(1.03);
+}
 .content h1 strong {
     color: black;
     font-weight: 400;
@@ -107,7 +109,9 @@ body {
     margin-block: 30px;
     line-height: 1.5rem;
 }
-
+p:hover{
+    transform: scale(1.03);
+}
 .content input {
     width: 340px;
     position: absolute;
@@ -120,7 +124,10 @@ body {
     font-size: 10pt;
     left: 100px;
 }
-
+form:hover > input, 
+form:hover > button{
+    transform: scale(1.03);
+}
 input:focus {
     border: 2px rgb(194, 97, 118) solid;
     opacity: 1;
@@ -139,10 +146,13 @@ input:focus {
     left: 130px;
 }
 .content button:hover{
-    background: var(--gradient);
+    background: linear-gradient(135deg, hsl(0, 100%, 93%), hsl(0, 100%, 74%));
 }
 #logo{
     width: 150px;
+}
+#logo:hover{
+    transform: scale(1.07);
 }
 #span{
     color: rgb(233, 29, 29);
@@ -166,7 +176,12 @@ input:focus {
         overflow: initial;
         height: max(620px, 100vh);
         overflow: hidden;
-        background-color: rgb(233, 233, 233);
+        background-color: rgb(241, 241, 227);
+        background-image: none;
+        border: none;
+    }
+    .container::after{
+        display: none;
     }
     .content{
         padding: 0;
@@ -199,12 +214,12 @@ input:focus {
     }
 
     #email {
-        width: 79%;
+        width: 78%;
         left: initial;
     }
     button{
         top: var(--top);
-        margin-left: -33px;
+        margin-left: -30px;
     }
     #span{
         justify-self: left;
