@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>✈️Travel Booking</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='all.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='fonts.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.scss'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <input type="search" placeholder="search" id="search">
+            <label for="search" class="search"><img src="search.svg" alt=""></label>
+            <div class="logo">
+                <span>Logo</span>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="bars"><img src="close-outline.svg"></div>
+            <div class="bars dois"><img src="reorder-three-outline.svg"></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Maps</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="content">
+            <h1>Booke you journay now!</h1>
+            <h3>Explore the world with us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet alias aperiam,
+                eum quibusdam cumque, quas quidem voluptatum voluptatibus, et quam blanditiis
+                accusantium quia animi necessitatibus vitae harum vel quae laudantium!</p>
+            <a href="#"><button>Book</button></a>
+            <a href="#" class="btn2"><button>Explore More</button></a>
+
+            <div class="icons">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
+            </div>
+        </div>
+
+        <div class="image"><img src="jackline.png" alt=""></div>
+    </section>
+
+    <script>
+        document.querySelector('.bar').onclick = function () {
+            document.querySelector('nav').classList.toggle('active')
+            document.querySelector('.bar').classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
