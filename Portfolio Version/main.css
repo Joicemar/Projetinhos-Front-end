@@ -989,6 +989,10 @@ body .container.work-container .portfolio-content .row:nth-child(4) #card4 img:h
     animation: pulse 800ms ease-in-out;
     filter: url(#noise4);
 }
+body .container.work-container .portfolio-content .row:nth-child(5) #card5 img:hover {
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise5);
+}
 
 /*---------------------------Start Contact container-----------------------------*/
 body .container.contact-container {

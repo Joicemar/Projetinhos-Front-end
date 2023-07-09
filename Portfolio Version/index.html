@@ -10,7 +10,7 @@
     <meta property="og:description" 
     content="Joicemar .S. Morais - Portfólio Front-end | 
     Desenvolvedor Web especializado em HTML, CSS, JavaScript e Frameworks modernos. Veja meus projetos e entre em contato para colaborações e oportunidades." />
-    <meta property="og:image" content="img/page.jpg" />
+    <meta property="og:image" content="https://64ab10c24bbc5258fd702ba7--subtle-druid-18cbfd.netlify.app/img/page.jpg" />
     <meta property="og:url" content="https://joicemar.github.io/personal-website/" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -199,7 +199,7 @@
                     <h5>Alta Qualidade</h5>
                 </li>
                 <li>
-                    <h5>Aprendizado em Equipe</h5>
+                    <h5>Aberto a Aprender</h5>
                 </li>
             </ul>
         </div>
@@ -213,7 +213,21 @@
         </div>
         <div class="portfolio-content">
             <div class="row">
-                <div class="card" id="card"><img src="img/freelancerWebsite.jpg" alt=""></div>
+                <div class="card" id="card"><img src="img/page.jpg" alt=""></div>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>HTML, CSS e Javascript</h6>
+                    </div>
+                </div>
+                <div class="link">
+                    <a target="_blank"
+                        href="https://joicemar.github.io/personal-website/">Demo🔗</a>
+                    <a target="_blank"
+                        href="https://github.com/Joicemar/Projetinhos-Front-end/tree/main/Portfolio%20Version">Github🔗</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card" id="card2"><img src="img/freelancerWebsite.jpg" alt=""></div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML, CSS e Javascript</h6>
@@ -228,7 +242,7 @@
             </div>
 
             <div class="row one">
-                <div class="card" id="card2"><img src="img/awax.jpg" alt=""></div>
+                <div class="card" id="card3"><img src="img/awax.jpg" alt=""></div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML SASS e Javascript</h6>
@@ -241,7 +255,7 @@
                 </div>
             </div>
             <div class="row two">
-                <div class="card" id="card3"><img src="img/projeto3.jpg" alt=""></div>
+                <div class="card" id="card4"><img src="img/projeto3.jpg" alt=""></div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML e CSS</h6>
@@ -254,7 +268,7 @@
             </div>
 
             <div class="row three">
-                <div class="card" id="card4"><img src="img/projeto4.jpg" alt=""></div>
+                <div class="card" id="card5"><img src="img/projeto4.jpg" alt=""></div>
                 <div class="main-row">
                     <div class="row-text">
                         <h6>HTML, CSS e Javascript</h6>
@@ -347,6 +361,15 @@
                 <feDisplacementMap in="SourceGraphic" in2="static">
                     <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1"
                         begin="card4.mouseenter" />
+                </feDisplacementMap>
+            </filter>
+            <filter id="noise5">
+                <feTurbulence baseFrequency="0.7,0.8" seed="0" type="fractalNoise" result="static">
+                    <animate attributeName="seed" values="0;100" dur="800ms" repeatCount="1" begin="card4.mouseenter" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                    <animate attributeName="scale" values="0;40;0" dur="800ms" repeatCount="1"
+                        begin="card5.mouseenter" />
                 </feDisplacementMap>
             </filter>
         </defs>
