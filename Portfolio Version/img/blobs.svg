@@ -1,0 +1,22 @@
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="100%" id="blobSvg">
+                <defs>
+                    <pattern id="image" patternUnits="userSpaceOnUse" width="500" height="500">
+                        <image id="me" class="blob-image" xlink:href="img/mebg.jpeg" width="600" height="600"
+                            style="transform: translate(-33px, 30px);" />
+                    </pattern>
+                </defs>
+                <path id="path" fill="url(#image)" stroke="black" stroke-width="5">
+                    <animate attributeName="d" dur="5500ms" repeatCount="indefinite" values="
+      
+                        M391.5,353.5Q317,457,192.5,419.5Q68,382,74,254.5Q80,127,196.5,91Q313,55,389.5,152.5Q466,250,391.5,353.5Z;
+                        M404.5,363Q323,476,197.5,427.5Q72,379,66.5,245.5Q61,112,183.5,94.5Q306,77,396,163.5Q486,250,404.5,363Z;
+                        M390,346.5Q313,443,195.5,409Q78,375,95.5,262.5Q113,150,215.5,94.5Q318,39,392.5,144.5Q467,250,390,346.5Z;
+                        M391.5,353.5Q317,457,192.5,419.5Q68,382,74,254.5Q80,127,196.5,91Q313,55,389.5,152.5Q466,250,391.5,353.5Z;
+                        ">
+                        <!--Add 1st and last value somo for loop
+                        aimation-->
+                    </animate>
+                </path>
+            </svg> 
+            
