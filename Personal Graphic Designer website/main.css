@@ -1,0 +1,305 @@
+/**
+*
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lumanosimo&family=Maven+Pro:wght@400;500;600&family=Nunito+Sans:wght@200;300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* ---- particles.js container ---- */
+}
+body:has(h1, h2, h3) {
+  color: rgb(255, 255, 255);
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Lumanosimo", cursive;
+  font-family: var("Maven Pro", sans-serif), sans-serif;
+}
+body nav {
+  position: fixed;
+  flex: 1;
+  right: 40px;
+  align-self: center;
+  justify-self: start;
+  margin-bottom: 100px;
+  z-index: 9;
+}
+body nav .nav_list {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  list-style: none;
+  z-index: 10;
+}
+body nav .nav_list a {
+  font-family: "Maven Pro", sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  list-style: none;
+  position: relative;
+  transition: 0.3s;
+  padding: 10px;
+}
+body nav .nav_list a:hover {
+  opacity: 0.7;
+}
+body nav .nav_list a:hover::after {
+  opacity: 0.7;
+}
+body nav .nav_list a::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 55%;
+  left: 0;
+  opacity: 0;
+  border-radius: 30%;
+  transition: 0.3s;
+}
+@media (max-width: 868px) {
+  body nav {
+    align-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    right: 0;
+    margin: 0;
+  }
+  body nav .nav_list {
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.2s;
+    transform: translateX(100%);
+  }
+  body nav .nav_list.active {
+    transform: translateX(0);
+  }
+  body nav .nav_list.active li {
+    opacity: 0;
+    transform: translateX(0);
+    animation: translateOpen forwards 0.4s ease;
+  }
+  body nav .nav_list.active li:nth-child(1) {
+    animation-delay: 80ms;
+  }
+  body nav .nav_list.active li:nth-child(2) {
+    animation-delay: 180ms;
+  }
+  body nav .nav_list.active li:nth-child(3) {
+    animation-delay: 280ms;
+  }
+}
+@keyframes translateOpen {
+  from {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+body header {
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+  margin: auto;
+  padding-inline: 32px;
+  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 868px) {
+  body header {
+    margin-right: 0;
+  }
+}
+body header .content_description {
+  display: grid;
+  gap: 40px;
+  font-size: clamp(0.7rem, 2vw, 1.2rem);
+  justify-items: center;
+  text-align: center;
+  margin-top: 12px;
+}
+body header .content_description h2 {
+  order: 1;
+}
+body header .content_description h1 {
+  order: 2;
+  line-height: 2.2rem;
+}
+body header .content_description h3 {
+  order: 3;
+}
+body header .content_description a {
+  order: 4;
+  background-color: rgb(86, 114, 118);
+  font-family: "Maven Pro", sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  list-style: none;
+  position: relative;
+  transition: 0.3s;
+  width: 100%;
+  height: 40px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+body header .content_description a:hover {
+  animation: pulse 0.5s ease;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body .toggle {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  /* is clicked 
+       */
+}
+body .toggle span {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  width: 28px;
+  height: 2px;
+  margin-top: -1px;
+  text-shadow: none;
+  color: transparent;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  right: 0;
+  top: 50%;
+  bottom: auto;
+  left: auto;
+}
+body .toggle span::before,
+body .toggle span::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transition-duration: 0.2s, 0.2s;
+  transition-delay: 0.2s, 0s;
+  position: absolute;
+  left: 0;
+}
+body .toggle span::before {
+  top: -8px;
+  transition-property: top, transform;
+}
+body .toggle span::after {
+  bottom: -8px;
+  transition-property: bottom, transform;
+}
+body .toggle.is-clicked span {
+  background-color: rgba(255, 255, 255, 0);
+}
+body .toggle.is-clicked span::before, body .toggle.is-clicked span::after {
+  background-color: rgb(255, 255, 255);
+  transition-delay: 0s, 0.2s;
+}
+body .toggle.is-clicked span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+body .toggle.is-clicked span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+@media (max-width: 868px) {
+  body .toggle {
+    display: block;
+  }
+}
+body ol {
+  position: absolute;
+  top: 0;
+  width: -moz-min-content;
+  width: min-content;
+  height: auto;
+  left: 20%;
+  z-index: 4;
+}
+body ol .nav_social {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: flex;
+  gap: 4vw;
+}
+body ol .nav_social li {
+  transition: 0.2s;
+}
+body ol .nav_social li a img {
+  width: 30px;
+  height: 30px;
+}
+body ol .nav_social li:hover {
+  transform: scale(1.1);
+}
+body canvas {
+  display: block;
+  vertical-align: bottom;
+}
+body #particles-js {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}/*# sourceMappingURL=main.css.map */
