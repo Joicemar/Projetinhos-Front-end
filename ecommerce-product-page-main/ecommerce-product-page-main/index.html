@@ -28,14 +28,22 @@
 <body>
 
     <nav class="container menu_nav">
+        <div class="bars_space">
+            <div class="bars">
+                <img src="images/icon-menu.svg" alt="menu_icon">
+                <img src="images/icon-close.svg" alt="menu_icon">
+            </div>
+        </div>
         <span class="logo">Sneakers</span>
-        <ul class="nav_options">
-            <li><a href="#0">Collections</a></li>
-            <li><a href="#0">Men</a></li>
-            <li><a href="#0">Women</a></li>
-            <li><a href="#0">About</a></li>
-            <li><a href="#0">Contact</a></li>
-        </ul>
+        <div class="nav_back">
+        </div>
+            <ul class="nav_options">
+                <li><a href="#0">Collections</a></li>
+                <li><a href="#0">Men</a></li>
+                <li><a href="#0">Women</a></li>
+                <li><a href="#0">About</a></li>
+                <li><a href="#0">Contact</a></li>
+            </ul>
         <div class="card_div">
             <div class="nav_img card_svg">
                 <img src="images/icon-cart.svg" alt="icon-cart">
@@ -120,6 +128,16 @@
     </div>
 
     <script src="main.js"></script>
+    <script>
+        let bars = document.querySelector('.bars');
+        let nav_options = document.querySelector('.nav_options');
+        let nav_back = document.querySelector('.nav_back');
+        bars.onclick = () =>{
+            bars.classList.toggle('open');
+            nav_options.classList.toggle('open');
+            nav_back.classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>
