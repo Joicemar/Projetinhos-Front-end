@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sneaker Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="container menu_nav">
+        <span class="logo">Sneakers</span>
+        <ul class="nav_options">
+            <li><a href="#0">Collections</a></li>
+            <li><a href="#0">Men</a></li>
+            <li><a href="#0">Women</a></li>
+            <li><a href="#0">About</a></li>
+            <li><a href="#0">Contact</a></li>
+        </ul>
+        <div class="card_div">
+            <div class="nav_img card_svg">
+                <img src="images/icon-cart.svg" alt="icon-cart">
+                <span id="alertProduct">0</span>
+            </div>
+            <div class="nav_img perfil_img">
+                <img src="images/image-avatar.png" alt="user-photo">
+            </div>
+            <!--Products Selected-->
+            <div class="cart_products">
+                <div class="card_tittle"><b>Cart</b></div>
+                <div class="card_space">
+                    <div class="card_content">
+                        <img src="images/image-product-1-thumbnail.jpg" alt="product selected">
+                        <div class="item_text">
+                            <p class="item">Fall Limited Edition Sneakers.</p>
+                            <p class="text_value" id="text_value" style="display: inline;"></p>
+                            <b id="negrito" style="display: inline;"></b>
+                        </div>
+                        <button onclick="removeProduct()"><img src="images/icon-delete.svg" alt="icon delet"></button>
+                    </div>
+                    <div class="card_btn"><a href="#"><button>Checkout</button></a></div>
+                </div>
+                <div class="cart_empty">
+                    <p>You cart is empty</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!------Start Header----->
+    <header class="container header">
+
+        <section class="product_img">
+            <div class="img_banner">
+                <img src="images/image-product-1.jpg" alt="produto">
+            </div>
+            <ul class="images_list">
+                <li class="img_option active" onclick="changeImage('images/image-product-1.jpg')">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="shoes">
+                </li>
+                <li class="img_option" onclick="changeImage('images/image-product-2.jpg')">
+                    <img src="images/image-product-2-thumbnail.jpg" alt="shoes">
+                </li>
+                <li class="img_option" onclick="changeImage('images/image-product-3.jpg')">
+                    <img src="images/image-product-3-thumbnail.jpg" alt="shoes">
+                </li>
+                <li class="img_option" onclick="changeImage('images/image-product-4.jpg')">
+                    <img src="images/image-product-4-thumbnail.jpg" alt="shoes">
+                </li>
+            </ul>
+        </section>
+        <section class="product_descriptions">
+            <div class="content">
+                <h1>Fall Limited Edition<br>Sneakers</h1>
+                <h2>Sneaker Company</h2>
+                <p>
+                    These low-profile sneakers are your perfect casual wear companion. Featuring a
+                    durable rubber outer sole, they’ll withstand everything the weather can offer.
+                </p>
+                <div class="price_content">
+                    <div class="price_discont">
+                        <span class="price">$125.00</span>
+                        <small class="discont">50%</small>
+                    </div>
+                    <div class="original_price">
+                        <small class="original">$250.00</small>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <button class="btn remove" onclick="remove_qty()"><img src="images/icon-minus.svg" alt=""></button>
+                    <div class="quantity_selected"><span id="quantity_selected">0</span></div>
+                    <button class="btn add" onclick="add_qty()"><img src="images/icon-plus.svg" alt=""></button>
+                    <button class="add_btn" id="add_to_cart" onclick="add_to_cart()">Add to cart</button>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/Joicemar" target="_blank">Joicemar .S. Morais</a>.
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
