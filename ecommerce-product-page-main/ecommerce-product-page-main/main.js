@@ -94,10 +94,12 @@ function removeAlertCart() {
 }
 
 /*---------------Imagens---------------*/
-function changeImage(fileName) {
-    let img = document.querySelector('.img_banner img');
-    img.setAttribute("src", fileName);
-    /*------------------Part 2---------------*/
+function changeImage() {
+    //let img = document.querySelector('.img_banner img');
+    //img.setAttribute("src", fileName);
+    slides.forEach(function (slide) {
+        slide.style.transform = `translateX(-${100 * (curSlide)}%)`;
+    });    /*------------------Part 2---------------*/
     // Remove a classe 'active' de todos os elementos da lista
     const elements = document.querySelectorAll('.img_option');
     elements.forEach(element => {

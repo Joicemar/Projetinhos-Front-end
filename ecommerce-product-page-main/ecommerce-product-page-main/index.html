@@ -27,7 +27,7 @@
 
 <body>
 
-    <nav class="container menu_nav">
+    <nav class="container menu_nav padding">
         <div class="bars_space">
             <div class="bars">
                 <img src="images/icon-menu.svg" alt="menu_icon">
@@ -37,13 +37,13 @@
         <span class="logo">Sneakers</span>
         <div class="nav_back">
         </div>
-            <ul class="nav_options">
-                <li><a href="#0">Collections</a></li>
-                <li><a href="#0">Men</a></li>
-                <li><a href="#0">Women</a></li>
-                <li><a href="#0">About</a></li>
-                <li><a href="#0">Contact</a></li>
-            </ul>
+        <ul class="nav_options">
+            <li><a href="#0">Collections</a></li>
+            <li><a href="#0">Men</a></li>
+            <li><a href="#0">Women</a></li>
+            <li><a href="#0">About</a></li>
+            <li><a href="#0">Contact</a></li>
+        </ul>
         <div class="card_div">
             <div class="nav_img card_svg">
                 <img src="images/icon-cart.svg" alt="icon-cart">
@@ -78,24 +78,31 @@
 
         <section class="product_img">
             <div class="img_banner">
-                <img src="images/image-product-1.jpg" alt="produto">
+                <img class="slide" src="images/image-product-1.jpg" alt="produto">
+                <img class="slide" src="images/image-product-2.jpg" alt="produto">
+                <img class="slide" src="images/image-product-3.jpg" alt="produto">
+                <img class="slide" src="images/image-product-4.jpg" alt="produto">
             </div>
-            <ul class="images_list">
-                <li class="img_option active" onclick="changeImage('images/image-product-1.jpg')">
+            <div class="mobile_control">
+                <button onclick="scroll_left();"><img src="images/icon-previous.svg" alt="previous_button"></button>
+                <button onclick="scrollRight();"><img src="images/icon-next.svg" alt="next_button"></button>
+            </div>
+            <ul class="images_list padding">
+                <li class="img_option active" onclick="curSlide=0; changeImage();">
                     <img src="images/image-product-1-thumbnail.jpg" alt="shoes">
                 </li>
-                <li class="img_option" onclick="changeImage('images/image-product-2.jpg')">
+                <li class="img_option" onclick="curSlide=1; changeImage();">
                     <img src="images/image-product-2-thumbnail.jpg" alt="shoes">
                 </li>
-                <li class="img_option" onclick="changeImage('images/image-product-3.jpg')">
+                <li class="img_option" onclick="curSlide=2; changeImage();">
                     <img src="images/image-product-3-thumbnail.jpg" alt="shoes">
                 </li>
-                <li class="img_option" onclick="changeImage('images/image-product-4.jpg')">
+                <li class="img_option" onclick="curSlide=3; changeImage();">
                     <img src="images/image-product-4-thumbnail.jpg" alt="shoes">
                 </li>
             </ul>
         </section>
-        <section class="product_descriptions">
+        <section class="product_descriptions padding">
             <div class="content">
                 <h1>Fall Limited Edition<br>Sneakers</h1>
                 <h2>Sneaker Company</h2>
@@ -113,30 +120,40 @@
                     </div>
                 </div>
                 <div class="quantity">
-                    <button class="btn remove" onclick="remove_qty()"><img src="images/icon-minus.svg" alt=""></button>
-                    <div class="quantity_selected"><span id="quantity_selected">0</span></div>
-                    <button class="btn add" onclick="add_qty()"><img src="images/icon-plus.svg" alt=""></button>
+                    <div class="quantity_btns">
+                        <button class="btn remove" onclick="remove_qty()"><img src="images/icon-minus.svg"
+                                alt=""></button>
+                        <div class="quantity_selected"><span id="quantity_selected">0</span></div>
+                        <button class="btn add" onclick="add_qty()"><img src="images/icon-plus.svg" alt=""></button>
+                    </div>
                     <button class="add_btn" id="add_to_cart" onclick="add_to_cart()">Add to cart</button>
                 </div>
             </div>
         </section>
 
     </header>
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://github.com/Joicemar" target="_blank">Joicemar .S. Morais</a>.
-    </div>
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/Joicemar" target="_blank">Joicemar .S. Morais</a>.
+        </div>
+    </footer>
 
     <script src="main.js"></script>
+    <script src="slider.js"></script>
     <script>
         let bars = document.querySelector('.bars');
         let nav_options = document.querySelector('.nav_options');
         let nav_back = document.querySelector('.nav_back');
-        bars.onclick = () =>{
+        bars.onclick = () => {
             bars.classList.toggle('open');
             nav_options.classList.toggle('open');
             nav_back.classList.toggle('open');
         }
+
+        let curSlide = 0;
+
     </script>
 </body>
 
