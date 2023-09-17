@@ -21,10 +21,11 @@
     z-index: 99;
     user-select: none;
 }
-.lightbox.open{
-    display: flex;
+@media(min-width: 868px){
+    .lightbox.open_lightbox{
+        display: flex;
+    }
 }
-
 @media(max-width: 868px){
     .lightbox{
         display: none;

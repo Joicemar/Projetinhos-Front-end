@@ -123,9 +123,9 @@ let imgSlide = document.querySelector('.img_banner');
 let close = document.querySelector('.close');
 
 imgSlide.addEventListener('click', ()=>{
-    lightbox.classList.add('open');
+    lightbox.classList.add('open_lightbox');
 });
 
 close.addEventListener('click', ()=>{
-    lightbox.classList.remove('open');
+    lightbox.classList.remove('open_lightbox');
 });
